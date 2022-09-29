@@ -1,0 +1,44 @@
+<DOCTYPE!html>
+<head>
+<title>GRADED</title>
+</head>
+<body>
+<form id="GRADE">
+<h2>When is halloween?</h2>
+<label for="q1"><input type="radio" name="q1" value="0" id="q1"/> October 25th</label>
+<label for="q1"><input type="radio" name="q1" value="0" id="q1"/> November 1st</label>
+<label for="q1"><input type="radio" name="q1" value="1" id="q1"/> October 31st</label>
+<br />
+
+<h2>What is the best halloween costume?</h2>
+<label for="q2"><input type="radio" name="q2" value="0" id="q2"/> Spongebob</label>
+<label for="q2"><input type="radio" name="q2" value="0" id="q2"/> An Animal</label>
+<label for="q2"><input type="radio" name="q2" value="1" id="q2"/> Tootsie Roll</label>
+<br />
+
+<h2>What is a werechicken?</h2>
+<label for="q3"><input type="radio" name="q3" value="0" id="q3"/> Half man/half chicken</label>
+<label for="q3"><input type="radio" name="q3" value="0" id="q3"/> Half chicken/half man</label>
+<label for="q3"><input type="radio" name="q3" value="1" id="q3"/> KFC's Worst Nightmare</label>
+<br />
+
+<p>Your grade is: <span id="grade">  </span> out of 3</p>
+<p id="grade2"></p>
+
+<button type="submit" value="submit">Turn it in </button>
+
+</form>
+
+<script>
+document.getElementByID("GRADED").onsubmit=function(){
+q1=parseInt(document.querySelector('input[name="q1"]:checked').value);
+q2=parseInt(document.querySelector('input[name="q2"]:checked').value);
+q3=parseInt(document.querySelector('input[name="q3"]:checked').value);
+
+result=q1+q2+q3;
+document.getElementById("grade").innerHTML=result;
+return false;
+}
+</script>
+</body>
+</html>
